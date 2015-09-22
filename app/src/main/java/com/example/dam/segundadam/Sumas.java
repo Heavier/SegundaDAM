@@ -69,7 +69,7 @@ public class Sumas extends AppCompatActivity {
         rbMulti = (RadioButton)findViewById(R.id.rbMulti);
         rbDiv = (RadioButton)findViewById(R.id.rbDiv);
         opc = "";
-        res = "35";
+        res = "";
 
 
         btOperar.setOnClickListener(
@@ -96,7 +96,7 @@ public class Sumas extends AppCompatActivity {
     public void onRadioButtonClicked(View view) {
         // Está seleccionado?
         boolean checked = ((RadioButton) view).isChecked();
-
+        opc = "";
         // Comprueba qué boton está seleccionado
         switch(view.getId()) {
             case R.id.rbSumar:
@@ -120,22 +120,23 @@ public class Sumas extends AppCompatActivity {
 
 
     private String sumar(int a , int b){
-        int resultado = 0;
+        int resultado;
         resultado = a + b;
         return resultado + "";
     }
     private String restar(int a , int b){
-        int resultado = 0;
+        int resultado;
         resultado = a - b;
         return resultado + "";
     }
     private String multiplicar(int a , int b){
-        int resultado = 0;
+        int resultado;
         resultado = a * b;
         return resultado + "";
     }
     private String dividir(int a , int b){
-        int resultado = 0;
+        //Este es el único que funciona
+        int resultado;
         resultado = a / b;
         return resultado + "";
     }
