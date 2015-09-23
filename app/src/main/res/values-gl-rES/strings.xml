@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SegundaDAM</string>
+    <string name="title_activity_primera_actividad">AppAndroid</string>
+    <string name="title_activity_sumas">Operaciones</string>
+
+    <string name="hello_world">Hola mundiño!</string>
+    <string name="action_settings">Opciones</string>
+
+    <string name="tvOp1">Numeriño:</string>
+    <string name="tvOp2">Introduce un númeriño</string>
+    <string name="btOperar">Hostie Patxi</string>
+    <string name="tvResultado">Calamares:</string>
+
+
+    <string name="sumar">Sumiña</string>
+    <string name="restar">Restiña</string>
+    <string name="multi">Multiplicar</string>
+    <string name="div">Dividiriviri</string>
+</resources>

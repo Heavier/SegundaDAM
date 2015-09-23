@@ -1,20 +1,19 @@
 <resources>
     <string name="app_name">SegundaDAM</string>
     <string name="title_activity_primera_actividad">AppAndroid</string>
+    <string name="title_activity_sumas">Operaciones</string>
 
     <string name="hello_world">Hola mundo!</string>
     <string name="action_settings">Opciones</string>
-    <string name="title_activity_suma">Suma</string>
 
     <string name="tvOp1">Número:</string>
     <string name="tvOp2">Introduce un número</string>
     <string name="btOperar">Operar</string>
     <string name="tvResultado">Resultado:</string>
-    <string name="title_activity_sumas">Operaciones</string>
+
 
     <string name="sumar">Sumar</string>
     <string name="restar">Restar</string>
     <string name="multi">Multiplicar</string>
     <string name="div">Dividir</string>
-
 </resources>

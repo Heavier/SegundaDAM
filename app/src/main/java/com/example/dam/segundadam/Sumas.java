@@ -75,20 +75,46 @@ public class Sumas extends AppCompatActivity {
         btOperar.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View v) {
+                        //Crea las dos variables que continen el valor de las cajas de texto.
                         int a = Integer.valueOf(etOp1.getText().toString());
                         int b = Integer.valueOf(etOp2.getText().toString());
 
+                        // Dependiendo de la opción engendrada por el método siguiente, elige una operacion u otra.
                         switch(opc) {
                             case "suma":
                                 res = sumar(a, b);
+                                break;
                             case "resta":
                                 res = restar(a, b);
-                            case "multi":
-                                res = multiplicar(a, b);
+                                break;
                             case "divi":
                                 res = dividir(a, b);
+                                break;
+                            case "multi":
+                                res = multiplicar(a, b);
+                                break;
                         }
                         etResultado.setText(res);
+
+                        /* Opción del profesor, ahorra todos los métodos inncesarios.
+                        switch (op){
+                            case R.id.rbSumar:
+                                r = a + b;
+                                break;
+                            case R.id.rbRestar:
+                                r = a - b;
+                                break;
+                            case R.id.rbMulti:
+                                r = a * b;
+                                break;
+                            case R.id.rbDivi:
+                                r = a /b;
+                                break;
+                            default:
+                                r = 0;
+                        }
+                         */
+
                     }
                 });
     }
@@ -120,25 +146,16 @@ public class Sumas extends AppCompatActivity {
 
 
     private String sumar(int a , int b){
-        int resultado;
-        resultado = a + b;
-        return resultado + "";
+        return a +b + "";
     }
     private String restar(int a , int b){
-        int resultado;
-        resultado = a - b;
-        return resultado + "";
+        return a - b  + "";
     }
     private String multiplicar(int a , int b){
-        int resultado;
-        resultado = a * b;
-        return resultado + "";
+        return a * b + "";
     }
     private String dividir(int a , int b){
-        //Este es el único que funciona
-        int resultado;
-        resultado = a / b;
-        return resultado + "";
+        return a / b + "";
     }
 
 }
