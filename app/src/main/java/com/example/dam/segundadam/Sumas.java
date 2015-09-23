@@ -60,8 +60,15 @@ public class Sumas extends AppCompatActivity {
         tvOp1 = (TextView)findViewById(R.id.tvOp1);
         tvOp2 = (TextView)findViewById(R.id.tvOp2);
         tvResultado= (TextView)findViewById(R.id.tvResultado);
+
         etOp1 = (EditText)findViewById(R.id.etOp1);
+        FiltroNumerico fn1 = new FiltroNumerico();
+        FiltroNumerico[] afn1 = new FiltroNumerico[1];
+        afn1[0] = fn1;
+        etOp1.setFilters(afn1);
+
         etOp2 = (EditText)findViewById(R.id.etOp2);
+        FiltroNumerico fn2 = new FiltroNumerico();
         etResultado = (EditText)findViewById(R.id.etResultado);
         btOperar = (Button)findViewById(R.id.btOperar);
         rbSumar = (RadioButton)findViewById(R.id.rbSumar);
