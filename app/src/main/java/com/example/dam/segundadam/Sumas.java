@@ -83,6 +83,7 @@ public class Sumas extends AppCompatActivity {
                 new View.OnClickListener() {
                     public void onClick(View v) {
                         //Crea las dos variables que continen el valor de las cajas de texto.
+
                         int a = Integer.valueOf(etOp1.getText().toString());
                         int b = Integer.valueOf(etOp2.getText().toString());
 

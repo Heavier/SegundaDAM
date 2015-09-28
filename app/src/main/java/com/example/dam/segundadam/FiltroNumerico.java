@@ -17,7 +17,25 @@ public class FiltroNumerico implements InputFilter {
         Log.v("filtro","dstart " + dstart);
         Log.v("filtro","dend " + dend);
 
-        //android inputfilter number range
-        return null;
+        if (source.toString().equals(""))
+        return null; //aceptar
+        String trozo1, trozo2;
+        trozo1 = dest.toString().substring(0,dstart);
+        trozo2 = dest.toString().substring(dstart);
+        Log.v("filtro",trozo1+" "+source.toString()+" "+trozo2);
+        String todo = trozo1 + source.toString() + trozo2;
+        try {
+            int valor = Integer.parseInt(todo);
+            if (valor >= 0 && valor <= 500)
+                return null; //aceptar
+        }catch (NumberFormatException e){
+        }
+        return ""; //rechazar
+    }
+
+    public static String insertar(String origen, String trozo, int posicion){
+        String trozo1 = origen.substring(0,posicion);
+        String trozo2 = origen.substring(posicion);
+        return trozo1 + trozo + trozo2;
     }
 }
