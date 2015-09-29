@@ -1,14 +1,23 @@
 package com.example.dam.segundadam;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /* Prototipo de clases en Java
  Clase de tipo POJO: plain old java object
  getter y setter
+ Constructor
+ toString
+ Equals y HashCod
 */
-public class Persona {
+public class Persona implements Serializable, Comparable<Persona>{
     private String nombre, apellidos, nif;
     private Date fechaNacimiento;
+
+    @Override
+    public int compareTo(Persona another) {
+        return 0;
+    }
 
     public enum Genero{
         femenino,
@@ -27,6 +36,10 @@ public class Persona {
         this.nif = nif;
         this.fechaNacimiento = fechaNacimiento;
         this.sexo = sexo;
+    }
+
+    public Persona (Persona p){
+        this(p.nombre, p.apellidos, p.nif, p.fechaNacimiento, p.sexo);
     }
 
     public Genero getSexo() {
@@ -97,5 +110,10 @@ public class Persona {
         int result = nif != null ? nif.hashCode() : 0;
         result = 31 * result + (fechaNacimiento != null ? fechaNacimiento.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
